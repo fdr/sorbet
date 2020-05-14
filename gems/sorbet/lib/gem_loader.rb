@@ -469,6 +469,9 @@ class Sorbet::Private::GemLoader
       my_require 'sequel'
       my_require 'sequel/sql'
     end,
+    'json-jwt' => proc do
+       my_require 'json/jwt'
+    end,
     'sequel_pg' => proc do
       # sequel_pg assumes that it was required by the adapter class in sequel
       # (i.e., it's not mean to be required manually). But also, sequel lazily
